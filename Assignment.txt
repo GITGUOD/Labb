@@ -1,0 +1,6 @@
+Labb 2:
+Outliers: mätdata som sticker ut. Kan se genom att datan är mycket större eller mindre än de andra datapunkterna. Efter upptäckten ska man gå tillbaka till datamaterialet och besluta om de är outliers eller om de var bara ovanliga värden.
+
+NA - represents as missing data. np.nan, NaT and NA for equality comparisons. Do not act as Non though. 
+
+isna() or notna() can also be used for equality comparison between dataframe and series.
