@@ -7,6 +7,13 @@ class Second_Lab:
         return data
     
     def analyzePotentialOutliers(data, threshold):
+        '''
+        AnalyzePotentialOutliers
+        
+        :param data: DataFrame to analyze according to earlier analysis
+        :param threshold: Vector with threshold values for each variable/column
+
+        '''
 
         results_list = []
 
