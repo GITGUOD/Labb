@@ -26,5 +26,5 @@ thresholds = {"a": 15, "b": 25}
 print(Second_Lab.analyzePotentialOutliers(Second_Lab.removeNA(df), thresholds))
 
 print("Contributors")
-print(Second_Lab.contributors('newfile.txt', 5))
-print(Second_Lab.contributors1('newfile.txt', 5))
+print(Second_Lab.contributors('newfile.txt', 44))
+#print(Second_Lab.contributors1('newfile.txt', 5))
