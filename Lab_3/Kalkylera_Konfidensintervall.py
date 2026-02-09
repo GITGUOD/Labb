@@ -13,14 +13,15 @@ df = pd.read_csv("Lab_3/data.csv")
 #data = np.random.normal(loc=50, scale=10, size=1000)
 groupA_estimated = df[df["Group"] == "A"]["Estimate"]
 groupB_estimated = df[df["Group"] == "B"]["Estimate"]
-
-print("Grupp A (uppskattad tid):", confidenceInterval(groupA_estimated))
-print("Grupp B (uppskattad tid):", confidenceInterval(groupB_estimated))
-
 groupA_actual = df[df["Group"] == "A"]["Actual"]
 groupB_actual = df[df["Group"] == "B"]["Actual"]
 
+print("Grupp A (uppskattad tid):", confidenceInterval(groupA_estimated))
 print("Grupp A (verklig tid):", confidenceInterval(groupA_actual))
+
+
+print("Grupp B (uppskattad tid):", confidenceInterval(groupB_estimated))
+
 print("Grupp B (verklig tid):", confidenceInterval(groupB_actual))
 
 
