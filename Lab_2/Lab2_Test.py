@@ -1,4 +1,4 @@
-from Lab2 import Second_Lab
+from Lab_2.Lab2 import Second_Lab
 
 import pandas as pd
 

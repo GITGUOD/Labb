@@ -5,7 +5,7 @@ class Second_Lab:
 
     def removeNA(data):
         data = data.dropna()
-        return data
+        return data.dropna()
     
     def analyzePotentialOutliers(data, threshold):
         '''
@@ -49,6 +49,9 @@ class Second_Lab:
         )
         counts = data["user"].value_counts()
 
+        # plocka bara själva datumet (utan +0200 osv)
+        data["datetime"] = data["datetime"].str.strip().str[:19]
+
         top_n = counts.head(n)
 
         plt.bar(top_n.index, top_n.values)
@@ -60,3 +63,6 @@ class Second_Lab:
         plt.show()
 
         return data.groupby("user")["datetime"].max().sort_values(ascending=True)
+    
+
+    #  Diskutera hur stor skillnad det är mellan olika personer och vad möjliga anledningar till detta är. Beror pår hur mycket innehåll varje commit är.
