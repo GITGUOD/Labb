@@ -48,6 +48,6 @@ public interface Stack<E> {
   * @param n number of items to pop
   * @return list a list of values
   */
-  List<E> multiPop(int n); 
+  List<E> multiPop(int n);
 
 }
