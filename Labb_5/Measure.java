@@ -21,7 +21,7 @@ public class Measure {
         try (PrintWriter writer = new PrintWriter(new FileWriter(outputFile))) {
 
             writer.println("Iteration,Time(ns)");
-            int totalTime = 0;
+            long totalTime = 0;
 
             LinkedList<Integer> copy = new LinkedList<>(data);
             for (int i = 0; i < N; i++) {
