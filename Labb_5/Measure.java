@@ -1,40 +1,61 @@
 package Labb_5;
-// Import the Scanner class to read text files
+
 import java.util.*;
-import java.io.File;                  // Import the File class
-import java.io.FileNotFoundException; // Import this class to handle errors
+import java.io.*;
 
 public class Measure {
 
-  public static void main(String[] args){
-    File file = new File("C:\\Users\\tonny\\OneDrive\\Documents\\EDAA35\\EDAA35-Labb\\Labb_5\\data1.txt");
-    ArrayList<Integer> lines = new ArrayList<>();
-    lines = readFile(file);
-    
-    LinkedList<Integer> data = new LinkedList<Integer>();
-    Random random = new Random();
-    for (int i = 0; i < 40; i++) {
-        int index = random.nextInt(lines.size());
-        data.add(lines.get(index));
-        System.out.println("Slumpat tal från filen: " + data.add(lines.get(index)));
-    }
-    ListSorter.sort(data);
-  }
+    public static void main(String[] args) {
 
-  public static ArrayList<Integer> readFile(File file) {
-    ArrayList<Integer> lines = new ArrayList<>();
-
-    try (Scanner scan = new Scanner(file)) {
-        while(scan.hasNextLine()) {
-            String line = scan.nextLine();
-            lines.add(Integer.parseInt(line));
+        if (args.length < 3) {
+            System.out.println("Usage: java Measure <inputfile> <outputfile> <N>");
+            return;
         }
-    } catch (FileNotFoundException e) {
-        System.out.println("An error occurred.");
-        e.printStackTrace();
+
+        String inputFile = args[0];
+        String outputFile = args[1];
+        int N = Integer.parseInt(args[2]);
+
+        LinkedList<Integer> data = readFile(inputFile);
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter(outputFile))) {
+
+            writer.println("Iteration,Time(ns)");
+            int totalTime = 0;
+
+            LinkedList<Integer> copy = new LinkedList<>(data);
+            for (int i = 0; i < N; i++) {
+
+                long start = System.nanoTime();
+                //Collections.sort(copy);
+                ListSorter.sort(copy);
+                long end = System.nanoTime();
+
+                long time = end - start;
+                totalTime += time;
+
+                writer.println(i + "," + time);
+            }
+
+            System.out.println("Average time: " + (totalTime / N));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    return lines;
-  }
+    public static LinkedList<Integer> readFile(String filename) {
+        LinkedList<Integer> list = new LinkedList<>();
 
+        try (Scanner scan = new Scanner(new File(filename))) {
+            while (scan.hasNextLine()) {
+                list.add(Integer.parseInt(scan.nextLine().trim()));
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("Could not find file: " + filename);
+        }
+
+        return list;
+    }
 }
