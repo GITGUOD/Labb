@@ -9,7 +9,7 @@ inFile = r"C:\Users\tonny\OneDrive\Documents\EDAA35\EDAA35-Labb\Labb_5\data2.txt
 #algorithm = "collections"   # eller "mysort"
 algorithm = "mysort"   # eller "collections"
 
-jit = True                  # False = -Xint
+jit = False                  # False = -Xint
 #dataType = "data1"
 dataType = "data2"
 n = 600
