@@ -1,0 +1,107 @@
+Första uppgiften är att:
+    
+    - Ange vilka metoder och klasser som ni tror är svärast att förstå för en utvecklare som ska vidare utveckla programmet. Dvs, vilka metoder och klasser som har lägst underhållsbarhet.
+
+Moduler:
+    Simulation:
+        Klasser:
+            - Event
+                - Lugn klass, ganska lätt
+            - Process
+                - Abstract klass, ganska lätt att vidareUtveckla
+            - ProgressBar
+                - Går att vidare utveckla med: SlowProgressBar etc
+            - Rand
+                - Mattemetoder eller liknande, går att vidareutveckla, lägga till flera metoder etc
+            - Simulation
+
+    Hospital:
+        Klasser:
+            - Doctor
+                - Extendar Process
+            - GUI
+                - Kompakt med kod, svår att vidareutveckla
+            - Generator
+                - Extendar Process, ser inte jätte svårt att modifiera
+            - Hospital
+                - Extendar Process och verkar också vara svårt att vidareutveckla
+            - HospitalEvent
+                - Extendar Event
+            - Patient.java
+                - Ganska lätt att vidareitveckla
+            - Sampler.java
+                - Extendar Process
+
+    Svar:
+        - Vi skulle säga att främst GUI, Hospital klasserna verkar vara svåra att vidare utveckla eftersom den bryter mot solidd principerna. Hospital bryter t.ex mot 
+        Single responsibility principen där den gör alldelles för mycket. Har en main metod som skapar många objekt, räknar antalet patienter, skriver ut loggar,
+        räknar procenten som simulationen är/proccessen av den simulationen blir klar etc. GUI tänker vi mer på OCP, open-closed principle där den verkar vara komplex,
+        skapa många GUI komponenter och verka vara svår att vidareutveckla/extenda etc.
+
+        - DOck finns det ett argument att abstrakta klasser såsom Process är svåra att vidareutveckla eftersom ja, visst är det lätt att lägga till flera klasser som inheritar de metoderna från abstraktklasserna,
+         men samtidigt kan man inte heller modifiera abstraktklasserna för då ändrar man alla klasser som ärver den klassen.
+
+        - Sedan finns det andra klasser såsom Doctor etc, som förmodligen går att extenda men de är definitivt inte lika lätta att vidare utveckla såsom Patient eller rand klasserna.
+        - Disclaimer, en klass som har det lätt att bli vidareutvecklad är en klass som vi tolkar som att det är lätt att lägga till kod utan att modifiera befintliga moduler/logik.
+
+
+Andra uppgiften:
+    - Jämför resultaten enligt ovan, samt diskutera om ni tycker att t ex WMC är ett bra mått att använda för att bedöma underhållbarhet. (Skriv ner vad ni kommer fram till i en fil eller på ett papper så att ni kan visa för labbhandledaren senare.)
+    
+
+
+        - Svar: WMC är summan av metodernas cyklomatiska komplexitet och används för att uppskatta hur svår en klass är att förstå och underhålla. Vi tycker att det är nog ett hyfsat okej, första handsval av metod att kunna beräkna snabbt t.ex hur komplext en klass eller en metod är.
+        Men det tar inte hänsyn till vissa variabler såsom hur klasserna hänger ihop, dess cohension/coupling med varandra etc.
+
+
+Tredje uppgiften: (Begreppen togs från kompendiet från canvas https://canvas.education.lu.se/courses/34183/pages/kurslitteratur?module_item_id=1392471)
+    - Beräkna Ca, Ce, I, A  och D(I, A)  för de båda paketen (för hand). Gör en tabell med en rad per mått (Ca, Ce etc) och en kolumn per paket. (Skriv ner vad ni kommer fram till i en fil eller på ett papper så att ni kan visa för labbhandledaren senare.)
+
+        - Vad är Ca?
+            - Ca är antalet klasser i andra paket som beror på klasser i paketet
+                - Antalet klasser utanför paketet som beror på paketet.
+                    - Eftersom vi har två paket kan vi beräkna ut Ca för både Simulation och Hospital
+
+                        - Simulation
+                            Här under beskriver vi vilka klasser utanför paketet som använder Simulation
+                            - Doctor
+                            - Generator
+                            - Hospital
+                            - HospitalEvent
+                            - Sampler
+                        Vi kollar importen för varje modul i paketet och fick fram att Ca för Simulation är 5.
+
+                        Tittar vi nu på Ca för Hospital, så får vi 0 då simulation använder inte Hospital paketet.
+        - Vad är Ce?
+            - Ce är antalet klasser i paketet som beror på klasser i andra paket:
+                - Simulation
+                    - börjar med Simulation, den använder inte andra klasser i andra paket: (Om man inte räknar java util), så 0
+                - Hospital:
+                    - Doctor använder Process från Simulation
+                    - GUI använder massa Swings (Räknas därför inte om man inte räknar med Swing biblioteket, men vi räknar inte med i detta fallet)
+                    - Generator använder Event, Process, Rand och Simulation från Simulation paketet
+                    - Hospital använder Process
+                    - Hospital Event extendar Event
+                    - Sampler använder Event, Process, Rand och Simulation
+            - Svar:
+                - Ce blir alltså 5 som Ca
+
+        - Beräkna I:
+            - I står för instability, ett mått på hur stabilt ett paket är:
+                - Ce / (Ca + Ce) = 5/10 = 1/2 där 0 är maximalt stabilt och I = 1 är maximalt instability
+
+        - Beräkna A:
+            - A = antalet abstrakta klasser i paketet / antalet klasser i paketet
+            - A är alltså hur många klasser som är abstrakta i en modul
+                - A för Simulation paketet finns det bara en abstrakt klass av 5.
+                - A för Hospital paketet finns 0 av 7. Dock använder paketet sig av den abstrakta klassen i Simulation Process.
+                - Men vi räknar ju för ett paket så:
+                    - Simulation 1/5 och Hospital 0. Totalt: 1/12
+
+        D(I, A) är ett mått på hur bra en design är med avseende på stabilitet
+        och hur abstrakta klasser är i designen.
+
+            - Detta görs D(I, A) = | (1/(sqrt(2))) (I+A-1) | = beroende på hur man räknar men om vi tar totalt:
+                - Alltså designen för både hospital och simulation då de hänger ihop med varandra.
+                - Så får vi | -11/12 * (1/sqrt(2)) | = ca 0.65 eller |-0.64818121608| för att vara exakt.
+

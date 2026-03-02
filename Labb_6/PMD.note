@@ -1,0 +1,361 @@
+Event.java:8:	NcssCount:	The class 'Event' has a NCSS line count of 21 (Highest = 3).
+Event.java:8:	CyclomaticComplexity:	The class 'Event' has a total cyclomatic complexity of 8 (highest 1).
+Event.java:18:	NcssCount:	The constructor 'Event(String)' has a NCSS line count of 3.
+Event.java:18:	CyclomaticComplexity:	The constructor 'Event(String)' has a cyclomatic complexity of 1.
+Event.java:26:	NcssCount:	The constructor 'Event()' has a NCSS line count of 2.
+Event.java:26:	CyclomaticComplexity:	The constructor 'Event()' has a cyclomatic complexity of 1.
+Event.java:34:	NcssCount:	The method 'setTime(double)' has a NCSS line count of 2.
+Event.java:34:	CyclomaticComplexity:	The method 'setTime(double)' has a cyclomatic complexity of 1.
+Event.java:42:	NcssCount:	The method 'getT()' has a NCSS line count of 2.
+Event.java:42:	CyclomaticComplexity:	The method 'getT()' has a cyclomatic complexity of 1.
+Event.java:50:	NcssCount:	The method 'setProcess(Process)' has a NCSS line count of 2.
+Event.java:50:	CyclomaticComplexity:	The method 'setProcess(Process)' has a cyclomatic complexity of 1.
+Event.java:58:	NcssCount:	The method 'getProcess()' has a NCSS line count of 2.
+Event.java:58:	CyclomaticComplexity:	The method 'getProcess()' has a cyclomatic complexity of 1.
+Event.java:66:	NcssCount:	The method 'type()' has a NCSS line count of 2.
+Event.java:66:	CyclomaticComplexity:	The method 'type()' has a cyclomatic complexity of 1.
+Event.java:70:	NcssCount:	The method 'toString()' has a NCSS line count of 2.
+Event.java:70:	CyclomaticComplexity:	The method 'toString()' has a cyclomatic complexity of 1.
+
+Class Event:
+NCSS: 21
+WMC: 8
+
+constructor
+NCSS:3
+WMC: 1
+
+SetTime:
+NCSS:2
+WMC: 1
+
+GetT()
+NCSS: 2
+WMC 1
+
+setProcess()
+NCSS: 2
+WMC: 1
+
+type():
+NCSS: 2
+WMC: 2
+
+toString():
+NCSS: 2
+WMC: 1
+
+
+Process.java:9:	NcssCount:	The class 'Process' has a NCSS line count of 13 (Highest = 4).
+Process.java:9:	CyclomaticComplexity:	The class 'Process' has a total cyclomatic complexity of 4 (highest 1).
+Process.java:17:	NcssCount:	The constructor 'Process(Simulation)' has a NCSS line count of 2.
+Process.java:17:	CyclomaticComplexity:	The constructor 'Process(Simulation)' has a cyclomatic complexity of 1.
+Process.java:26:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 1.
+Process.java:26:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 1.
+Process.java:33:	NcssCount:	The method 'setTimer(double, Event)' has a NCSS line count of 4.
+Process.java:33:	CyclomaticComplexity:	The method 'setTimer(double, Event)' has a cyclomatic complexity of 1.
+Process.java:44:	NcssCount:	The method 'sendMessage(Process, Event)' has a NCSS line count of 4.
+Process.java:44:	CyclomaticComplexity:	The method 'sendMessage(Process, Event)' has a cyclomatic complexity of 1.
+
+Class Process:
+NCSS: 13
+WMC:  4
+
+Constructor Process(Simulation)
+NCSS: 2
+WMC:  1
+
+handleEvent(Event)
+NCSS: 1
+WMC:  1
+
+setTimer(double, Event)
+NCSS: 4
+WMC:  1
+
+sendMessage(Process, Event)
+NCSS: 4
+WMC:  1
+
+ProgressBar.java:9:	NcssCount:	The class 'ProgressBar' has a NCSS line count of 10 (Highest = 4).
+ProgressBar.java:9:	CyclomaticComplexity:	The class 'ProgressBar' has a total cyclomatic complexity of 2 (highest 1).
+ProgressBar.java:19:	NcssCount:	The constructor 'ProgressBar(Simulation, double)' has a NCSS line count of 4.
+ProgressBar.java:19:	CyclomaticComplexity:	The constructor 'ProgressBar(Simulation, double)' has a cyclomatic complexity of 1.
+ProgressBar.java:25:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 3.
+ProgressBar.java:25:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 1.
+
+Class ProgressBar:
+NCSS: 10
+WMC:  2
+
+Constructor ProgressBar(Simulation, double)
+NCSS: 4
+WMC:  1
+
+handleEvent(Event)
+NCSS: 3
+WMC:  1
+
+
+Rand.java:10:	NcssCount:	The class 'Rand' has a NCSS line count of 9 (Highest = 3).
+Rand.java:10:	CyclomaticComplexity:	The class 'Rand' has a total cyclomatic complexity of 3 (highest 1).
+Rand.java:18:	NcssCount:	The method 'rect(double, double)' has a NCSS line count of 2.
+Rand.java:18:	CyclomaticComplexity:	The method 'rect(double, double)' has a cyclomatic complexity of 1.
+Rand.java:27:	NcssCount:	The method 'exp(double)' has a NCSS line count of 3.
+Rand.java:27:	CyclomaticComplexity:	The method 'exp(double)' has a cyclomatic complexity of 1.
+Rand.java:38:	NcssCount:	The method 'gauss(double, double)' has a NCSS line count of 3.
+Rand.java:38:	CyclomaticComplexity:	The method 'gauss(double, double)' has a cyclomatic complexity of 1.
+
+Class Rand:
+NCSS: 9
+WMC:  3
+
+rect(double, double)
+NCSS: 2
+WMC:  1
+
+exp(double)
+NCSS: 3
+WMC:  1
+
+gauss(double, double)
+NCSS: 3
+WMC:  1
+
+Simulation.java:12:	NcssCount:	The class 'Simulation' has a NCSS line count of 27 (Highest = 13).
+Simulation.java:12:	CyclomaticComplexity:	The class 'Simulation' has a total cyclomatic complexity of 8 (highest 4).
+Simulation.java:22:	NcssCount:	The constructor 'Simulation()' has a NCSS line count of 3.
+Simulation.java:22:	CyclomaticComplexity:	The constructor 'Simulation()' has a cyclomatic complexity of 1.
+Simulation.java:23:	NcssCount:	The class '' has a NCSS line count of 2 (Highest = 2).
+Simulation.java:23:	CyclomaticComplexity:	The class '' has a total cyclomatic complexity of 3 (highest 3).
+Simulation.java:24:	NcssCount:	The method 'compare(Event, Event)' has a NCSS line count of 2.
+Simulation.java:24:	CyclomaticComplexity:	The method 'compare(Event, Event)' has a cyclomatic complexity of 3.
+Simulation.java:35:	NcssCount:	The constructor 'Simulation(boolean)' has a NCSS line count of 3.
+Simulation.java:35:	CyclomaticComplexity:	The constructor 'Simulation(boolean)' has a cyclomatic complexity of 1.
+Simulation.java:44:	NcssCount:	The method 'addEvent(Event)' has a NCSS line count of 2.
+Simulation.java:44:	CyclomaticComplexity:	The method 'addEvent(Event)' has a cyclomatic complexity of 1.
+Simulation.java:52:	NcssCount:	The method 'getTime()' has a NCSS line count of 2.
+Simulation.java:52:	CyclomaticComplexity:	The method 'getTime()' has a cyclomatic complexity of 1.
+Simulation.java:60:	NcssCount:	The method 'simulate(double)' has a NCSS line count of 13.
+Simulation.java:60:	CyclomaticComplexity:	The method 'simulate(double)' has a cyclomatic complexity of 4.
+
+Class Simulation:
+NCSS: 27
+WMC:  8
+
+Constructor Simulation()
+NCSS: 3
+WMC:  1
+
+compare(Event, Event)
+NCSS: 2
+WMC:  3
+
+Constructor Simulation(boolean)
+NCSS: 3
+WMC:  1
+
+addEvent(Event)
+NCSS: 2
+WMC:  1
+
+getTime()
+NCSS: 2
+WMC:  1
+
+simulate(double)
+NCSS: 13
+WMC:  4
+
+/Doctor.java:11:	NcssCount:	The class 'Doctor' has a NCSS line count of 20 (Highest = 10).
+/Doctor.java:11:	CyclomaticComplexity:	The class 'Doctor' has a total cyclomatic complexity of 5 (highest 3).
+/Doctor.java:23:	NcssCount:	The constructor 'Doctor(Simulation, Hospital, String)' has a NCSS line count of 4.
+/Doctor.java:23:	CyclomaticComplexity:	The constructor 'Doctor(Simulation, Hospital, String)' has a cyclomatic complexity of 1.
+/Doctor.java:29:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 10.
+/Doctor.java:29:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 3.
+/Doctor.java:42:	NcssCount:	The method 'toString()' has a NCSS line count of 2.
+/Doctor.java:42:	CyclomaticComplexity:	The method 'toString()' has a cyclomatic complexity of 1.
+
+Class Doctor:
+NCSS: 20
+WMC:  5
+
+Constructor Doctor(Simulation, Hospital, String)
+NCSS: 4
+WMC:  1
+
+handleEvent(Event)
+NCSS: 10
+WMC:  3
+
+toString()
+NCSS: 2
+WMC:  1
+
+/GUI.java:19:	NcssCount:	The class 'GUI' has a NCSS line count of 22 (Highest = 19).
+/GUI.java:19:	CyclomaticComplexity:	The class 'GUI' has a total cyclomatic complexity of 1 (highest 1).
+/GUI.java:28:	NcssCount:	The constructor 'GUI(Hospital)' has a NCSS line count of 19.
+/GUI.java:28:	CyclomaticComplexity:	The constructor 'GUI(Hospital)' has a cyclomatic complexity of 1.
+/GUI.java:34:	NcssCount:	The class '' has a NCSS line count of 3 (Highest = 3).
+/GUI.java:34:	CyclomaticComplexity:	The class '' has a total cyclomatic complexity of 1 (highest 1).
+/GUI.java:35:	NcssCount:	The method 'actionPerformed(ActionEvent)' has a NCSS line count of 3.
+/GUI.java:35:	CyclomaticComplexity:	The method 'actionPerformed(ActionEvent)' has a cyclomatic complexity of 1.
+/GUI.java:41:	NcssCount:	The class '' has a NCSS line count of 2 (Highest = 2).
+/GUI.java:41:	CyclomaticComplexity:	The class '' has a total cyclomatic complexity of 1 (highest 1).
+/GUI.java:42:	NcssCount:	The method 'actionPerformed(ActionEvent)' has a NCSS line count of 2.
+/GUI.java:42:	CyclomaticComplexity:	The method 'actionPerformed(ActionEvent)' has a cyclomatic complexity of 1.
+
+Class GUI:
+NCSS: 22
+WMC:  1
+
+Constructor GUI(Hospital)
+NCSS: 19
+WMC:  1
+
+actionPerformed(ActionEvent)
+NCSS: 3
+WMC:  1
+
+actionPerformed(ActionEvent)
+NCSS: 2
+WMC:  1
+
+
+/Generator.java:14:	NcssCount:	The class 'Generator' has a NCSS line count of 11 (Highest = 4).
+/Generator.java:14:	CyclomaticComplexity:	The class 'Generator' has a total cyclomatic complexity of 2 (highest 1).
+/Generator.java:24:	NcssCount:	The constructor 'Generator(Simulation, Hospital)' has a NCSS line count of 4.
+/Generator.java:24:	CyclomaticComplexity:	The constructor 'Generator(Simulation, Hospital)' has a cyclomatic complexity of 1.
+/Generator.java:30:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 4.
+/Generator.java:30:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 1.
+
+Class Generator:
+NCSS: 11
+WMC:  2
+
+Constructor Generator(Simulation, Hospital)
+NCSS: 4
+WMC:  1
+
+handleEvent(Event)
+NCSS: 4
+WMC:  1
+
+/Hospital.java:14:	NcssCount:	The class 'Hospital' has a NCSS line count of 53 (Highest = 21).
+/Hospital.java:14:	CyclomaticComplexity:	The class 'Hospital' has a total cyclomatic complexity of 12 (highest 5).
+/Hospital.java:20:	NcssCount:	The method 'main(String[])' has a NCSS line count of 9.
+/Hospital.java:20:	CyclomaticComplexity:	The method 'main(String[])' has a cyclomatic complexity of 1.
+/Hospital.java:48:	NcssCount:	The constructor 'Hospital(Simulation)' has a NCSS line count of 5.
+/Hospital.java:48:	CyclomaticComplexity:	The constructor 'Hospital(Simulation)' has a cyclomatic complexity of 2.
+/Hospital.java:55:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 21.
+/Hospital.java:55:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 5.
+/Hospital.java:85:	NcssCount:	The method 'nrJobs()' has a NCSS line count of 3.
+/Hospital.java:85:	CyclomaticComplexity:	The method 'nrJobs()' has a cyclomatic complexity of 1.
+/Hospital.java:94:	NcssCount:	The method 'log(String)' has a NCSS line count of 3.
+/Hospital.java:94:	CyclomaticComplexity:	The method 'log(String)' has a cyclomatic complexity of 2.
+/Hospital.java:104:	NcssCount:	The method 'percentageDone()' has a NCSS line count of 2.
+/Hospital.java:104:	CyclomaticComplexity:	The method 'percentageDone()' has a cyclomatic complexity of 1.
+
+Class Hospital:
+NCSS: 53
+WMC:  12
+
+main(String[])
+NCSS: 9
+WMC:  1
+
+Constructor Hospital(Simulation)
+NCSS: 5
+WMC:  2
+
+handleEvent(Event)
+NCSS: 21
+WMC:  5
+
+nrJobs()
+NCSS: 3
+WMC:  1
+
+log(String)
+NCSS: 3
+WMC:  2
+
+percentageDone()
+NCSS: 2
+WMC:  1
+
+
+/HospitalEvent.java:8:	NcssCount:	The class 'HospitalEvent' has a NCSS line count of 14 (Highest = 4).
+/HospitalEvent.java:8:	CyclomaticComplexity:	The class 'HospitalEvent' has a total cyclomatic complexity of 4 (highest 1).
+/HospitalEvent.java:13:	NcssCount:	The constructor 'HospitalEvent(String, Patient)' has a NCSS line count of 3.
+/HospitalEvent.java:13:	CyclomaticComplexity:	The constructor 'HospitalEvent(String, Patient)' has a cyclomatic complexity of 1.
+/HospitalEvent.java:18:	NcssCount:	The constructor 'HospitalEvent(String, Patient, Doctor)' has a NCSS line count of 4.
+/HospitalEvent.java:18:	CyclomaticComplexity:	The constructor 'HospitalEvent(String, Patient, Doctor)' has a cyclomatic complexity of 1.
+/HospitalEvent.java:25:	NcssCount:	The method 'getPatient()' has a NCSS line count of 2.
+/HospitalEvent.java:25:	CyclomaticComplexity:	The method 'getPatient()' has a cyclomatic complexity of 1.
+/HospitalEvent.java:29:	NcssCount:	The method 'getDoctor()' has a NCSS line count of 2.
+/HospitalEvent.java:29:	CyclomaticComplexity:	The method 'getDoctor()' has a cyclomatic complexity of 1.
+
+Class HospitalEvent:
+NCSS: 14
+WMC:  4
+
+Constructor HospitalEvent(String, Patient)
+NCSS: 3
+WMC:  1
+
+Constructor HospitalEvent(String, Patient, Doctor)
+NCSS: 4
+WMC:  1
+
+getPatient()
+NCSS: 2
+WMC:  1
+
+getDoctor()
+NCSS: 2
+WMC:  1
+
+/Patient.java:8:	NcssCount:	The class 'Patient' has a NCSS line count of 6 (Highest = 2).
+/Patient.java:8:	CyclomaticComplexity:	The class 'Patient' has a total cyclomatic complexity of 2 (highest 1).
+/Patient.java:16:	NcssCount:	The constructor 'Patient(String)' has a NCSS line count of 2.
+/Patient.java:16:	CyclomaticComplexity:	The constructor 'Patient(String)' has a cyclomatic complexity of 1.
+/Patient.java:20:	NcssCount:	The method 'toString()' has a NCSS line count of 2.
+/Patient.java:20:	CyclomaticComplexity:	The method 'toString()' has a cyclomatic complexity of 1.
+
+Class Patient:
+NCSS: 6
+WMC:  2
+
+Constructor Patient(String)
+NCSS: 2
+WMC:  1
+
+toString()
+NCSS: 2
+WMC:  1
+
+/Sampler.java:18:	NcssCount:	The class 'Sampler' has a NCSS line count of 16 (Highest = 8).
+/Sampler.java:18:	CyclomaticComplexity:	The class 'Sampler' has a total cyclomatic complexity of 4 (highest 2).
+/Sampler.java:28:	NcssCount:	The constructor 'Sampler(Simulation, Hospital)' has a NCSS line count of 8.
+/Sampler.java:28:	CyclomaticComplexity:	The constructor 'Sampler(Simulation, Hospital)' has a cyclomatic complexity of 2.
+/Sampler.java:41:	NcssCount:	The method 'handleEvent(Event)' has a NCSS line count of 3.
+/Sampler.java:41:	CyclomaticComplexity:	The method 'handleEvent(Event)' has a cyclomatic complexity of 1.
+/Sampler.java:46:	NcssCount:	The method 'done()' has a NCSS line count of 2.
+/Sampler.java:46:	CyclomaticComplexity:	The method 'done()' has a cyclomatic complexity of 1.
+
+Class Sampler:
+NCSS: 16
+WMC:  4
+
+Constructor Sampler(Simulation, Hospital)
+NCSS: 8
+WMC:  2
+
+handleEvent(Event)
+NCSS: 3
+WMC:  1
+
+done()
+NCSS: 2
+WMC:  1
