@@ -28,5 +28,5 @@ speedup = mean_nojit / mean_jit
 print("JIT medelvärde:", mean_jit, "CI:", ci_jit)
 print("NO JIT medelvärde:", mean_nojit, "CI:", ci_nojit)
 print("Hur många gånger snabbare var JIT körningen jämfört med utan JIT :", speedup)
-print("Hur långt ifrån varandra medelvärdena är, alltså den relativa variationen", "t =", t)
+print("Hur långt ifrån varandra medelvärdena är, alltså den relativa variationen", "t =", abs(t))
 print("Sannolikheten att skillnaden är baserad på slump","p =", p)
