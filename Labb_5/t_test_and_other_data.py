@@ -30,3 +30,6 @@ print("NO JIT medelvärde:", mean_nojit, "CI:", ci_nojit)
 print("Hur många gånger snabbare var JIT körningen jämfört med utan JIT :", speedup)
 print("Hur långt ifrån varandra medelvärdena är, alltså den relativa variationen", "t =", abs(t))
 print("Sannolikheten att skillnaden är baserad på slump","p =", p)
+
+# t-value to assess if differences are real or due to random chance
+# A p-value measures the probability that your study results occurred by random chance, assuming the null hypothesis (no real effect) is true

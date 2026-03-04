@@ -18,12 +18,12 @@ def load_mean(algorithm, jit, dataType):
 
 
 algorithm = "mysort"
-dataType = "data1"
-# dataType = "data2"
+#dataType = "data1"
+#dataType = "data2"
 
 
 # algorithm = "collections"
-# dataType = "data1"
+dataType = "data1"
 # dataType = "data2"
 
 mean_false = load_mean(algorithm, False, dataType)
@@ -36,6 +36,7 @@ plt.plot(mean_true, label="JIT ON")
 
 plt.title(f"{algorithm} comparison | {dataType}")
 plt.xlabel("Iteration")
+plt.axvline(30, color = 'r', linestyle = '--', label = 'jämvikt')
 plt.ylabel("Time")
 plt.legend()
 
